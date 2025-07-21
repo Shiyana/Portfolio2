@@ -6,21 +6,41 @@
   <title>Shiyana Jayanesan Shylaja | AI/ML Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f8f9fb; color: #333; line-height: 1.6; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f8f9fb; color: #333; line-height: 1.6; position: relative; }
     header { background: linear-gradient(to right, #4e73df, #1cc88a); color: #fff; text-align: center; padding: 3rem 1rem; }
     header h1 { margin: 0; font-size: 2.5rem; }
     header p { font-size: 1.2rem; margin-top: 0.5rem; }
-    nav { text-align: center; padding: 1rem; background: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
-    nav a { margin: 0 1rem; color: #4e73df; text-decoration: none; font-weight: 600; }
+    nav { text-align: center; padding: 1rem; background: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; }
+    nav a { margin: 0 1rem; color: #4e73df; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #1cc88a; }
     section { padding: 3rem 10%; }
     section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #4e73df; }
-    .projects, .skills, .experience, .education, .achievements, .certifications { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
-    .card img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; }
-    footer { background: #4e73df; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
-    footer a { color: #fff; text-decoration: none; font-weight: 600; }
+    .projects, .skills, .experience, .education, .achievements, .certifications, .portfolio-artifacts, .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .card img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; transition: transform 0.3s; }
+    .card img:hover { transform: scale(1.05); }
     .resume-button { display: block; text-align: center; margin-top: 2rem; }
-    .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; }
+    .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; transition: background 0.3s; }
+    .resume-button a:hover { background: #17a673; }
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4e73df;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 15px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+    #backToTop:hover { background-color: #1cc88a; }
+    footer { background: #4e73df; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
@@ -32,6 +52,8 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#artifacts">Portfolio Artifacts</a>
+    <a href="#tools">Tools</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
@@ -42,7 +64,7 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am an AI and Machine Learning enthusiast with a background in International Business and Information Technology. I specialize in model development, evaluation, and data visualization using Python, Scikit-learn, Matplotlib, and Seaborn. My experience spans client engagement, digital transformation, and applying AI to solve real-world problems.</p>
+    <p>I am an AI and Machine Learning enthusiast with expertise in model development, evaluation, and visualization. With a strong background in International Business (AI track) and Information Technology, I aim to solve real-world problems by blending strategic thinking with technical knowledge. I have experience across AI research infrastructure, digital transformation, and strategic hiring initiatives for U.S. clients.</p>
     <div class="resume-button"><a href="resume.pdf" target="_blank">Download Resume</a></div>
   </section>
 
@@ -50,15 +72,41 @@
     <h2>Projects</h2>
     <div class="projects">
       <div class="card">
-        <img src="confusion_matrix.png" alt="Confusion Matrix Visualization">
-        <h3>AI/ML Model Visualization</h3>
-        <p>Evaluated Random Forest, SVM, and Decision Tree models with confusion matrices, ROC curves, and accuracy metrics.</p>
+        <img src="accuracy_comparison.png" alt="Accuracy Comparison">
+        <h3>AI Model Evaluation</h3>
+        <p>Performance analysis of Random Forest, SVM, and Decision Tree models with visual metrics like confusion matrices, ROC curves, and accuracy comparisons.</p>
       </div>
       <div class="card">
         <img src="roc_curve.png" alt="ROC Curve">
-        <h3>Model Performance Analysis</h3>
-        <p>Applied feature engineering, SMOTE, and cross-validation to improve predictions and presented findings visually.</p>
+        <h3>Model Performance Visualization</h3>
+        <p>Applied advanced techniques like feature scaling, SMOTE, and cross-validation to enhance predictions and demonstrate model trade-offs visually.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="artifacts">
+    <h2>Portfolio Artifacts</h2>
+    <div class="portfolio-artifacts">
+      <div class="card">
+        <h3>Artifact 2: Data Visualization & Model Assessment</h3>
+        <p>This artifact demonstrates the use of Python (Scikit-learn, Matplotlib, Seaborn) to visualize ML model results through confusion matrices, ROC curves, and bar charts for accuracy, precision, recall, and F1-score.</p>
+      </div>
+      <div class="card">
+        <h3>Key Learning</h3>
+        <p>Developed skills in preprocessing, handling class imbalance, and effectively communicating results to technical and non-technical audiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>Key Tools & Technologies</h2>
+    <div class="tools">
+      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" height="50"><p>Python</p></div>
+      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" height="50"><p>Pandas</p></div>
+      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" height="50"><p>NumPy</p></div>
+      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" height="50"><p>TensorFlow</p></div>
+      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS" height="50"><p>AWS</p></div>
+      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" height="50"><p>Git</p></div>
     </div>
   </section>
 
@@ -118,9 +166,22 @@
     <p>Phone: 808-751-7237</p>
   </section>
 
+  <button id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</button>
+
   <footer>
     <p>&copy; 2025 Shiyana Jayanesan Shylaja | AI/ML Portfolio</p>
   </footer>
+
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
 
