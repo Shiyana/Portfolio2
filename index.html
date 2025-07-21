@@ -20,6 +20,7 @@
     .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; }
     .resume-button img { margin-right: 8px; }
     img.graph { max-width: 100%; border-radius: 8px; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .caption { font-size: 0.9rem; color: #555; margin-top: -0.5rem; margin-bottom: 1rem; }
     footer { background: #4e73df; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
   </style>
 </head>
@@ -69,14 +70,17 @@
     <div class="card">
       <h3>Confusion Matrix</h3>
       <img class="graph" src="confusion_matrix.png" alt="Confusion Matrix Graph">
+      <div class="caption">Confusion matrix showcasing model predictions vs actual outcomes.</div>
     </div>
     <div class="card">
       <h3>Accuracy Comparison</h3>
       <img class="graph" src="accuracy_comparison.png" alt="Accuracy Comparison Graph">
+      <div class="caption">Bar chart comparing accuracy across Random Forest, SVM, and Decision Tree models.</div>
     </div>
     <div class="card">
       <h3>ROC Curve</h3>
       <img class="graph" src="roc_curve.png" alt="ROC Curve Graph">
+      <div class="caption">ROC curve showing trade-off between true positive and false positive rates.</div>
     </div>
   </section>
 
@@ -100,5 +104,4 @@
   </footer>
 </body>
 </html>
-
 
