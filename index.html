@@ -7,26 +7,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f8f9fb; color: #333; line-height: 1.6; position: relative; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f8f9fb; color: #333; line-height: 1.6; }
     header { background: linear-gradient(to right, #4e73df, #1cc88a); color: #fff; text-align: center; padding: 3rem 1rem; }
     header h1 { margin: 0; font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; }
     nav { text-align: center; padding: 1rem; background: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; }
     nav a { margin: 0 1rem; color: #4e73df; text-decoration: none; font-weight: 600; transition: color 0.3s; }
     nav a:hover, nav a.active { color: #1cc88a; border-bottom: 2px solid #1cc88a; padding-bottom: 2px; }
-    section { padding: 3rem 10%; min-height: 100vh; }
+    section { padding: 3rem 10%; }
     section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #4e73df; }
-    .projects, .skills, .experience, .education, .achievements, .certifications, .portfolio-artifacts, .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-    .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-    .card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-    .card img { max-width: 100%; border-radius: 8px; margin-bottom: 1rem; transition: transform 0.3s; }
-    .card img:hover { transform: scale(1.05); }
+    .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; margin-bottom: 1.5rem; }
     .resume-button { display: block; text-align: center; margin-top: 2rem; }
-    .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; transition: background 0.3s; display: inline-flex; align-items: center; }
-    .resume-button a:hover { background: #17a673; }
+    .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; }
     .resume-button img { margin-right: 8px; }
-    #backToTop { display: none; position: fixed; bottom: 20px; right: 20px; background-color: #4e73df; color: #fff; border: none; border-radius: 50%; padding: 10px 15px; font-size: 20px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: background 0.3s; }
-    #backToTop:hover { background-color: #1cc88a; }
     footer { background: #4e73df; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
   </style>
 </head>
@@ -37,117 +29,62 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#introduction">Introduction</a>
     <a href="#projects">Projects</a>
-    <a href="#artifacts">Portfolio Artifacts</a>
-    <a href="#tools">Tools</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
+    <a href="#artifacts">Artifacts</a>
+    <a href="#key-learnings">Key Learnings</a>
+    <a href="#reflection">Reflection</a>
     <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am an AI and Machine Learning enthusiast with expertise in model development, evaluation, and visualization. With a strong background in International Business (AI track) and Information Technology, I aim to solve real-world problems by blending strategic thinking with technical knowledge. I have experience across AI research infrastructure, digital transformation, and strategic hiring initiatives for U.S. clients.</p>
-    <div class="resume-button">
-      <a href="./resume.pdf" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/20/ffffff/pdf.png" alt="PDF Icon"> Download Resume
-      </a>
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <div class="card">
+      <p>This portfolio highlights my recent AI and ML projects, including data analysis, model performance evaluation, and visualization techniques. The artifact featured here focuses on model comparisons and visualization metrics like confusion matrices and ROC curves. It demonstrates my ability to combine technical expertise with strategic problem-solving to deliver actionable insights.</p>
+      <p>The work documented reflects not just technical outcomes but the process of iterative learning, tuning, and evaluating AI models for performance. These projects bridge both academic and real-world applications, emphasizing robust, reproducible data science practices.</p>
+      <p>This introduction summarizes key goals: showcasing expertise in Python, ML frameworks, and visualization tools, and presenting insights in a manner understandable to technical and non-technical audiences alike.</p>
     </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <img src="accuracy_comparison.png" alt="Accuracy Comparison">
-        <h3>AI Model Evaluation</h3>
-        <p>Performance analysis of Random Forest, SVM, and Decision Tree models with visual metrics like confusion matrices, ROC curves, and accuracy comparisons.</p>
-      </div>
-      <div class="card">
-        <img src="roc_curve.png" alt="ROC Curve">
-        <h3>Model Performance Visualization</h3>
-        <p>Applied advanced techniques like feature scaling, SMOTE, and cross-validation to enhance predictions and demonstrate model trade-offs visually.</p>
-      </div>
+    <div class="card">
+      <h3>AI Model Evaluation & Visualization</h3>
+      <p>Compared Random Forest, SVM, and Decision Tree models using advanced metrics like accuracy, precision, recall, F1-score, and AUC. Implemented visualization techniques such as confusion matrices and ROC curves to effectively communicate model performance. Techniques like feature scaling and SMOTE were applied for better results.</p>
     </div>
   </section>
 
   <section id="artifacts">
-    <h2>Portfolio Artifacts</h2>
-    <div class="portfolio-artifacts">
-      <div class="card">
-        <h3>Artifact 2: Data Visualization & Model Assessment</h3>
-        <p>This artifact demonstrates the use of Python (Scikit-learn, Matplotlib, Seaborn) to visualize ML model results through confusion matrices, ROC curves, and bar charts for accuracy, precision, recall, and F1-score.</p>
-      </div>
-      <div class="card">
-        <h3>Key Learning</h3>
-        <p>Developed skills in preprocessing, handling class imbalance, and effectively communicating results to technical and non-technical audiences.</p>
-      </div>
+    <h2>Artifacts</h2>
+    <div class="card">
+      <h3>Artifact 2: Model Performance Visuals</h3>
+      <p>Generated clear and interpretable visuals of model outcomes, highlighting trade-offs between algorithms. This artifact includes visual comparisons of model metrics to support decision-making for model selection.</p>
     </div>
   </section>
 
-  <section id="tools">
-    <h2>Key Tools & Technologies</h2>
-    <div class="tools">
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" height="50"><p>Python</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" height="50"><p>Pandas</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" height="50"><p>NumPy</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" height="50"><p>TensorFlow</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" height="50"><p>AWS</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" height="50"><p>Git</p></div>
+  <section id="key-learnings">
+    <h2>Key Learnings</h2>
+    <div class="card">
+      <p>Through this project, I improved my expertise in data preprocessing, model evaluation, and result visualization. I gained hands-on experience with Python libraries such as Scikit-learn, Matplotlib, and Seaborn. I also learned how to balance interpretability with model accuracy while presenting insights to diverse stakeholders.</p>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience">
-      <div class="card"><h3>MCNC</h3><p>AI strategy, cloud services, and data lake solutions for education institutions across North Carolina.</p></div>
-      <div class="card"><h3>Bahwan CyberTek</h3><p>Senior Client Engagement – Led digital transformation and AI hiring solutions.</p></div>
-      <div class="card"><h3>DiamondPick</h3><p>Senior Team Lead – Designed AI-driven talent solutions for U.S. clients.</p></div>
-      <div class="card"><h3>Covenant Consultants</h3><p>Associate – Developed strategic hiring processes and key client relationships.</p></div>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education">
-      <div class="card"><h3>SKEMA Business School</h3><p>Masters in International Business (AI Track), April 2024.</p></div>
-      <div class="card"><h3>St. Peter’s University</h3><p>Masters & Bachelors in Information Technology, May 2017.</p></div>
+  <section id="reflection">
+    <h2>Reflection</h2>
+    <div class="card">
+      <p>Reflecting on this artifact, I recognize the importance of transparent data analytics and honest communication of model outcomes. The project reinforced my ability to critically evaluate results and identify the strengths and limitations of various ML approaches. This skill is crucial for building trustworthy AI solutions.</p>
     </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">AI & Machine Learning (Python, Scikit-learn, TensorFlow)</div>
-      <div class="card">Data Visualization (Matplotlib, Seaborn, Plotly)</div>
-      <div class="card">Cybersecurity & Bug Hunting</div>
-      <div class="card">AWS, SQL, R, Shiny</div>
-      <div class="card">UX Design (Figma, Adobe XD, Sketch)</div>
-      <div class="card">Business Strategy & Client Engagement</div>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="certifications">
-      <div class="card">Cybersecurity (Bug Hunter) – Infoziant Systems, 2023</div>
-      <div class="card">Leadership Development Program – NCSU, 2023</div>
-      <div class="card">Scrum Basics – LinkedIn, 2023</div>
-      <div class="card">Balance Scorecard & Strategy – Lumen Institute, 2023</div>
-    </div>
-  </section>
-
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <div class="achievements">
-      <div class="card">Outstanding Achievement Award (DiamondPick)</div>
-      <div class="card">Target Achiever Award (Covenant Consultants)</div>
-      <div class="card">University Topper (St. Peter’s University)</div>
-    </div>
+    <div class="card">AI & Machine Learning (Python, Scikit-learn, TensorFlow)</div>
+    <div class="card">Data Visualization (Matplotlib, Seaborn, Plotly)</div>
+    <div class="card">Cybersecurity & Bug Hunting</div>
+    <div class="card">AWS, SQL, R, Shiny</div>
+    <div class="card">UX Design (Figma, Adobe XD, Sketch)</div>
+    <div class="card">Business Strategy & Client Engagement</div>
   </section>
 
   <section id="contact">
@@ -157,40 +94,10 @@
     <p>Phone: 808-751-7237</p>
   </section>
 
-  <button id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</button>
-
   <footer>
     <p>&copy; 2025 Shiyana Jayanesan Shylaja | AI/ML Portfolio</p>
   </footer>
-
-  <script>
-    const backToTopButton = document.getElementById('backToTop');
-    const navLinks = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('section');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 60;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
+
 
