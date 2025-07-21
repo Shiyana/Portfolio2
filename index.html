@@ -16,6 +16,7 @@
     section { padding: 3rem 10%; }
     section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #4e73df; }
     .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; margin-bottom: 1.5rem; }
+    .testimonial { font-style: italic; color: #555; margin-top: 1rem; }
     .resume-button { display: block; text-align: center; margin-top: 2rem; }
     .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; }
     .resume-button img { margin-right: 8px; }
@@ -32,12 +33,13 @@
 
   <nav>
     <a href="#about">About</a>
+    <a href="#work-samples">Work Samples</a>
     <a href="#projects">Projects</a>
     <a href="#activities">Activities</a>
     <a href="#artifacts">Artifacts</a>
     <a href="#key-learnings">Key Learnings</a>
     <a href="#reflection">Reflection</a>
-    <a href="#artifact2">Artifact 2</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#visuals">Visualizations</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -53,10 +55,40 @@
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Project Overview</h2>
+  <section id="work-samples">
+    <h2>Work Samples</h2>
     <div class="card">
-      <p>This project involved the analysis of an open dataset using machine learning models like Decision Tree, SVM, and Random Forest. Metrics such as accuracy, precision, recall, and F1-score were used for performance evaluation. Visualization tools like Matplotlib and Seaborn were employed to create confusion matrices, ROC curves, and accuracy comparison charts to assess the models. The goal was to determine which algorithm performed best and why.</p>
+      <p>Here are selected examples of my AI/ML work that showcase various skills including data preprocessing, model development, and visualization.</p>
+      <ul>
+        <li><a href="#projects">Project: ML Model Evaluation</a> – Includes code snippets, performance metrics, and visual outputs.</li>
+        <li><a href="#artifact2">Artifact 2: Advanced Visualization</a> – Demonstrates my expertise with confusion matrices and ROC curves.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Project Descriptions</h2>
+    <div class="card">
+      <h3>AI Model Evaluation</h3>
+      <p><strong>Context:</strong> Evaluated multiple models on a classification dataset to determine the most accurate algorithm. <br>
+      <strong>Challenges:</strong> Managing class imbalance and optimizing hyperparameters. <br>
+      <strong>Solutions:</strong> Applied SMOTE for balancing, tuned hyperparameters using grid search, and visualized results with confusion matrices and ROC curves.</p>
+    </div>
+    <div class="card">
+      <h3>Data Visualization Artifact</h3>
+      <p><strong>Context:</strong> Visualizing model performance for clear stakeholder communication. <br>
+      <strong>Challenges:</strong> Creating intuitive and impactful visualizations. <br>
+      <strong>Solutions:</strong> Used Python libraries (Matplotlib, Seaborn) to generate bar charts, ROC curves, and heatmaps.</p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="card">
+      <p class="testimonial">“Shiyana is a driven AI/ML professional who combines technical expertise with a keen sense for business strategy. Her ability to visualize complex data makes her a standout contributor.” – Former Team Lead</p>
+    </div>
+    <div class="card">
+      <p class="testimonial">“Her approach to problem-solving and model evaluation consistently exceeds expectations. Shiyana's work is both innovative and practical.” – Academic Mentor</p>
     </div>
   </section>
 
