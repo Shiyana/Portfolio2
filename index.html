@@ -13,7 +13,7 @@
     header p { font-size: 1.2rem; margin-top: 0.5rem; }
     nav { text-align: center; padding: 1rem; background: #fff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; }
     nav a { margin: 0 1rem; color: #4e73df; text-decoration: none; font-weight: 600; transition: color 0.3s; }
-    nav a:hover { color: #1cc88a; }
+    nav a:hover, nav a.active { color: #1cc88a; border-bottom: 2px solid #1cc88a; padding-bottom: 2px; }
     section { padding: 3rem 10%; }
     section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; color: #4e73df; }
     .projects, .skills, .experience, .education, .achievements, .certifications, .portfolio-artifacts, .tools { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
@@ -59,15 +59,13 @@
     </div>
   </section>
 
-  <section id="tools">
-    <h2>Key Tools & Technologies</h2>
-    <div class="tools">
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" height="50"><p>Python</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" height="50"><p>Pandas</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" height="50"><p>NumPy</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" height="50"><p>TensorFlow</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" height="50"><p>AWS</p></div>
-      <div class="card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" height="50"><p>Git</p></div>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="card">Cybersecurity (Bug Hunter) – Infoziant Systems, 2023</div>
+      <div class="card">Leadership Development Program – NCSU, 2023</div>
+      <div class="card">Scrum Basics – LinkedIn, 2023</div>
+      <div class="card">Balance Scorecard & Strategy – Lumen Institute, 2023</div>
     </div>
   </section>
 
@@ -79,14 +77,35 @@
 
   <script>
     const backToTopButton = document.getElementById('backToTop');
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
     window.addEventListener('scroll', () => {
+      // Back to top button toggle
       if (window.scrollY > 300) {
         backToTopButton.style.display = 'block';
       } else {
         backToTopButton.style.display = 'none';
       }
+
+      // Active section highlight
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 60;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
     });
   </script>
 </body>
 </html>
+
 
