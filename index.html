@@ -19,6 +19,7 @@
     .resume-button { display: block; text-align: center; margin-top: 2rem; }
     .resume-button a { background: #1cc88a; padding: 10px 20px; border-radius: 8px; color: #fff; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; }
     .resume-button img { margin-right: 8px; }
+    img.graph { max-width: 100%; border-radius: 8px; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     footer { background: #4e73df; color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
   </style>
 </head>
@@ -29,21 +30,21 @@
   </header>
 
   <nav>
-    <a href="#introduction">Introduction</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#artifacts">Artifacts</a>
-    <a href="#key-learnings">Key Learnings</a>
-    <a href="#reflection">Reflection</a>
+    <a href="#visuals">Visualizations</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <div class="card">
-      <p>This portfolio highlights my recent AI and ML projects, including data analysis, model performance evaluation, and visualization techniques. The artifact featured here focuses on model comparisons and visualization metrics like confusion matrices and ROC curves. It demonstrates my ability to combine technical expertise with strategic problem-solving to deliver actionable insights.</p>
-      <p>The work documented reflects not just technical outcomes but the process of iterative learning, tuning, and evaluating AI models for performance. These projects bridge both academic and real-world applications, emphasizing robust, reproducible data science practices.</p>
-      <p>This introduction summarizes key goals: showcasing expertise in Python, ML frameworks, and visualization tools, and presenting insights in a manner understandable to technical and non-technical audiences alike.</p>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am an AI and Machine Learning enthusiast with expertise in model development, evaluation, and visualization. With a strong background in International Business (AI track) and Information Technology, I aim to solve real-world problems by blending strategic thinking with technical knowledge.</p>
+    <div class="resume-button">
+      <a href="./resume.pdf" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/20/ffffff/pdf.png" alt="PDF Icon"> Download Resume
+      </a>
     </div>
   </section>
 
@@ -51,29 +52,31 @@
     <h2>Projects</h2>
     <div class="card">
       <h3>AI Model Evaluation & Visualization</h3>
-      <p>Compared Random Forest, SVM, and Decision Tree models using advanced metrics like accuracy, precision, recall, F1-score, and AUC. Implemented visualization techniques such as confusion matrices and ROC curves to effectively communicate model performance. Techniques like feature scaling and SMOTE were applied for better results.</p>
+      <p>Compared Random Forest, SVM, and Decision Tree models using accuracy, precision, recall, F1-score, and AUC metrics. Applied feature scaling and SMOTE to improve predictions.</p>
     </div>
   </section>
 
   <section id="artifacts">
     <h2>Artifacts</h2>
     <div class="card">
-      <h3>Artifact 2: Model Performance Visuals</h3>
-      <p>Generated clear and interpretable visuals of model outcomes, highlighting trade-offs between algorithms. This artifact includes visual comparisons of model metrics to support decision-making for model selection.</p>
+      <h3>Artifact 2: Data Visualization & Model Assessment</h3>
+      <p>Includes confusion matrices, ROC curves, and bar charts to showcase model performance effectively.</p>
     </div>
   </section>
 
-  <section id="key-learnings">
-    <h2>Key Learnings</h2>
+  <section id="visuals">
+    <h2>Visualization Outputs</h2>
     <div class="card">
-      <p>Through this project, I improved my expertise in data preprocessing, model evaluation, and result visualization. I gained hands-on experience with Python libraries such as Scikit-learn, Matplotlib, and Seaborn. I also learned how to balance interpretability with model accuracy while presenting insights to diverse stakeholders.</p>
+      <h3>Confusion Matrix</h3>
+      <img class="graph" src="confusion_matrix.png" alt="Confusion Matrix Graph">
     </div>
-  </section>
-
-  <section id="reflection">
-    <h2>Reflection</h2>
     <div class="card">
-      <p>Reflecting on this artifact, I recognize the importance of transparent data analytics and honest communication of model outcomes. The project reinforced my ability to critically evaluate results and identify the strengths and limitations of various ML approaches. This skill is crucial for building trustworthy AI solutions.</p>
+      <h3>Accuracy Comparison</h3>
+      <img class="graph" src="accuracy_comparison.png" alt="Accuracy Comparison Graph">
+    </div>
+    <div class="card">
+      <h3>ROC Curve</h3>
+      <img class="graph" src="roc_curve.png" alt="ROC Curve Graph">
     </div>
   </section>
 
@@ -81,10 +84,8 @@
     <h2>Skills</h2>
     <div class="card">AI & Machine Learning (Python, Scikit-learn, TensorFlow)</div>
     <div class="card">Data Visualization (Matplotlib, Seaborn, Plotly)</div>
-    <div class="card">Cybersecurity & Bug Hunting</div>
     <div class="card">AWS, SQL, R, Shiny</div>
     <div class="card">UX Design (Figma, Adobe XD, Sketch)</div>
-    <div class="card">Business Strategy & Client Engagement</div>
   </section>
 
   <section id="contact">
